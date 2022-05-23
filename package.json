@@ -1,0 +1,25 @@
+{
+    "name": "monaca-template-onsenui-v2-js-tabbar",
+    "dependencies": {
+        "cordova-custom-config": "5.1.1",
+        "cordova-plugin-splashscreen": "6.0.0",
+        "monaca-plugin-monaca-core": "3.3.1",
+        "cordova-plugin-inappbrowser": "5.0.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-custom-config": {},
+            "cordova-plugin-splashscreen": {},
+            "monaca-plugin-monaca-core": {},
+            "cordova-plugin-inappbrowser": {}
+        }
+    },
+    "scripts": {
+        "monaca:preview": "npm run dev",
+        "dev": "browser-sync start -s www/ --watch --port 8080 --ui-port 8081"
+    },
+    "devDependencies": {
+        "browser-sync": "~2.27.7",
+        "cordova": "^11.0.0"
+    }
+}

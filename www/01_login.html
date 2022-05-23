@@ -1,0 +1,49 @@
+<!--
+  <ons-page>
+    <ons-tabbar position="auto">
+      <ons-tab label="ID/PW" page="page1.html" >
+      </ons-tab>
+      <ons-tab label="Email/PW" page="page2.html" >
+      </ons-tab>
+      <ons-tab label="匿名" page="page3.html">
+      </ons-tab>
+    </ons-tabbar>
+  </ons-page>
+-->
+<!-- page1 -->
+
+<ons-page id="first-page" modifier="loginpage">
+  <!--<div class="page__background" style="background-image:url('www/image');"></div>-->
+  <head calss="nospace">
+    <h2 style="margin-top:0;">コラム二スタへようこそ</h2>
+  </head>
+  <div class="loginPage_explain">
+    <p class="loginpage_text">
+      登録後マイページの編集をお願いします<br>
+      その後みんなのコラムを読んだり、自分のコラムを投稿したり、気に入った作者のSNSをフォローしましょう
+    <p>
+  </div>
+  <div class="loginPage">
+    <p style="text-align: center;">
+        <ons-input type="text" id="singinUsername" modifier="underbar loginInput" placeholder="ペンネーム" float></ons-input><br>
+        <ons-input type="password" id="singinPassword" modifier="underbar loginInput" placeholder="Password" float></ons-input><br>
+        <p style="text-align: center;">
+            <ons-button onclick="onSigninByIDBtn();">SIGN IN</ons-button>
+        </p>
+    </p>
+
+    <p style="text-align: center;">
+        <ons-input type="text" maxlength="20" id="singupUsername" modifier="underbar loginInput" placeholder="ペンネーム登録 最大20文字" float></ons-input><br>
+        <ons-input type="password" id="singupPassword" modifier="underbar loginInput" placeholder="Password ６文字以上" float></ons-input><br>
+        <ons-input type="password" id="singupPasswordConfirm" modifier="underbar loginInput" placeholder="Password 確認" float></ons-input><br>
+        <p style="text-align: center;">
+            <ons-button onclick="onSignupByIDBtn();">SIGN UP</ons-button>
+        </p>
+        <div class="caution">
+          <span class="box-title">！注意！</span>
+          <p>※ペンネームは公開されます。他者を不快にするような表現はご遠慮ください</p>
+        </div>
+    </p>
+  </div>
+</ons-page>
+

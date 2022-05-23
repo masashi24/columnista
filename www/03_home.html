@@ -1,0 +1,39 @@
+<ons-page id="postList"> 
+  <ons-toolbar style="height:auto;">
+    <div class="center">
+    <ons-list>
+      <ons-list-header id="totalPostNum" class="postNumHeader"></ons-list-header>
+      <ons-list-item modifier="homeheader">
+        <font size="2" class="nospace">検索オプション</font>
+        <ons-row>
+          <ons-col>
+            <ons-input id="skipNum" style="width: 100%; border: 1px solid #ccc;"  modifier="underbar" placeholder=" [整数] 件目を検索" ></ons-input>
+          </ons-col>
+          <ons-col>
+            <ons-input id="ownerSerch" style="width: 100%; border: 1px solid #ccc;" modifier="underbar" placeholder=" [文字列] 作者検索" ></ons-input>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+      <ons-list-item modifier="homeheader">
+        &nbsp;
+        <ons-button onclick="loadPosts(`latest`)">最新</ons-button>
+        &nbsp;
+        <ons-button onclick="loadPosts(`popular`)">人気</ons-button>
+        &nbsp;
+        <ons-button onclick="loadPosts()" modifier="bluebtn">検索</ons-button>
+        &nbsp;
+        <ons-button onclick="loadPosts(`like`)" modifier="bluebtn">Likeのみ検索</ons-button>
+      </ons-list-item>
+    </ons-list>
+    </div>
+  </ons-toolbar>
+        <div id="adg"></div>
+  <div class="page__background" style="height:auto;"></div>
+  <div class="page__content" style="padding-top: 100px;">
+    <ons-list style="height:auto;">
+      <ons-lazy-repeat id="infinite-list"></ons-lazy-repeat>
+    </ons-list>
+  </div>
+ </ons-page>
+
+

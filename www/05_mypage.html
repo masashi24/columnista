@@ -1,0 +1,67 @@
+<ons-page id="myPage">
+
+<script>
+    // 画像を選択した際の処理
+    $qs('#file').addEventListener('change', (e) => {
+        // 画像を取得
+      const file = e.target.files[0];
+      // ファイル読み込み用
+      const fileReader = new FileReader();
+      // ファイルを読み込んだ時のコールバック
+      fileReader.onload = function() {
+        // dataURIをそのまま指定
+            $qs('#preview img').src = this.result;
+      }
+      // ファイル名を残しておく
+      $qs('#name').innerText = file.name;
+      // dataURIとしてファイルを読み込む
+      fileReader.readAsDataURL(file);
+    });
+  </script>
+
+  <div class="background"></div>
+    <div class="content">
+      <ons-card>
+        <ons-list>
+          <ons-list-header>アイコン設定</ons-list-header>
+        </ons-list>
+        <div id="preview" style="text-align: center; padding-top:10px;">
+          <img class="icon_top" src="../css/no_image.png" alt="Onsen UI">
+          <div id="name"></div>
+          <input type="file" id="file" accept="image/*" />
+        </div>
+
+        <div class="content" style="padding-top:10px">
+          <ons-list>
+            <ons-list-header>SNS登録</ons-list-header>
+            <ons-list-item>
+              <div class="left">
+                Twitter
+              </div>
+              <div class="right">
+                <ons-button onclick="showLinkRegisterDialog(`twitter`)">ID登録</ons-button>
+              </div>
+            </ons-list-item>
+            <ons-list-item>
+              <div class="left">
+                instagram
+              </div>
+              <div class="right">
+                <ons-button onclick="showLinkRegisterDialog(`instagram`)">ユーザー名登録</ons-button>
+              </div>
+            </ons-list-item>
+          </ons-list>
+
+          <ons-list>
+            <ons-list-header>自己紹介</ons-list-header>
+            <ons-list-item>
+              <textarea class="textarea" rows="4" placeholder="Textarea" id="profileMessage" style="width: 100%"></textarea>
+            </ons-list-item>
+            <p style="text-align: center;">
+              <ons-button onclick="saveProfile();">保存</ons-button>
+            </p>
+          </ons-list>
+        </div>
+      </ons-card>
+    </div>
+</ons-page>

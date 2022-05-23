@@ -1,0 +1,18 @@
+<ons-page id="post">
+  <ons-list>
+    <ons-list-header>題名</ons-list-header>
+    <ons-list-item>
+      <ons-input maxlength="20" placeholder="題名入力（最大２０文字）" id="postTitle" style="width: 100%" style="width: 100%" modifier="underbar"></ons-input>
+    </ons-list-item>
+  </ons-list>
+  <ons-list>
+    <ons-list-header>内容</ons-list-header>
+    <ons-list-item>
+      <textarea class="textarea" rows="20" placeholder="内容入力" id="postContent" style="width: 100%"></textarea>
+    </ons-list-item>
+    <p style="text-align: center;">
+      <ons-button onclick="savePost();">投稿</ons-button>
+    </p>
+  </ons-list>
+
+</ons-page>

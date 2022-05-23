@@ -1,0 +1,139 @@
+<ons-page>
+
+  <script>
+    document.addEventListener('show', function(event) {
+      var mypage = event.target;
+      var titleElement = document.querySelector('#toolbar-title');
+
+      if (mypage.matches('#postList')) {
+        //titleElement.innerHTML = 'ID/PW認証';
+        titleElement.innerHTML = 'みんなの投稿';
+        loadPosts();
+      } 
+      else if (mypage.matches('#post')) {
+        titleElement.innerHTML = '投稿する';
+      } 
+      else if (mypage.matches('#myPage')) {
+        titleElement.innerHTML = 'マイページ';
+        loadMyPage();
+      }
+      else if (mypage.matches('#myPost')) {
+        titleElement.innerHTML = 'マイ投稿';
+        loadMyPosts();
+      }
+    });
+  </script>
+
+  <!-- Pop up personal page -->
+  <template id="dialog.html">
+    <ons-dialog modifier="userPageDialog" id="my-dialog">
+      <div style="text-align: center; padding: 10px;">
+        <ons-card modifier="userPage">
+          <div id="dialogProfilePreview" style="text-align: center; padding-top:10px;">
+            <img class="icon_top" src="../css/no_image.png" alt="Onsen UI">
+          </div>
+          <div class="content" style="padding-top:10px">
+            <ons-list>
+              <ons-list-header>SNS</ons-list-header>
+              <ons-list-item>
+                <div class="left">
+                  Twitter
+                </div>
+                <div class="right">
+                  <i onclick="openSNS(this)" id="userPageDialogTwitter" link="#" style="color: #00aced;" class="fab fa-twitter-square fa-3x"></i>
+                </div>
+              </ons-list-item>
+              <ons-list-item>
+                <div class="left">
+                  Instagram
+                </div>
+                <div class="right">
+                  <i onclick="openSNS(this)" id="userPageDialogInstagram" link="#" style="color: #3f729b" class="fab fa-instagram fa-3x"></i>
+                </div>
+              </ons-list-item>
+            </ons-list>
+            <ons-list>
+              <ons-list-header>自己紹介</ons-list-header>
+              <ons-list-item>
+                <textarea class="textarea" readonly rows="4" placeholder="Textarea" id="dialogProfileMessage" style="width: 100%;"></textarea>
+              </ons-list-item>
+            </ons-list>
+          </div>
+        </ons-card>
+        <p style="text-align: center">
+          <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+        </p>
+      </div>
+    </ons-dialog>
+  </template>
+
+  <!-- Pop up edit dialog window -->
+  <template id="editDialogWindow.html">
+    <ons-dialog modifier="userPageDialog" id="edit-dialog">
+      <div id="editContentTextBox" style="text-align: center; padding: 10px;">
+        <ons-list>
+          <ons-list-header>タイトル</ons-list-header>
+          <ons-list-item>
+            <textarea class="textarea" rows="1" placeholder="Textarea" id="editTitle" style="width: 100%"></textarea>
+          </ons-list-item>
+        </ons-list>
+        <ons-list>
+          <ons-list-header>内容</ons-list-header>
+          <ons-list-item>
+            <textarea class="textarea" rows="20" placeholder="Textarea" id="editContent" style="width: 100%"></textarea>
+          </ons-list-item>
+          <p style="text-align: center;">
+            <ons-button id="saveEditBtn" pk="" onclick="saveEditPost(this);">内容変更</ons-button>
+          </p>
+        </ons-list>
+        <p>
+          <ons-button onclick="hideDialog('edit-dialog')">Close</ons-button>
+        </p>
+      </div>
+    </ons-dialog>
+  </template>
+
+
+    <!-- Pop up edit dialog window -->
+  <template id="linkRegisterDialog.html">
+    <ons-dialog modifier="userPageDialog" id="linkRegister-dialog">
+      <div id="editSNSLink" style="text-align: center; padding: 10px;">
+        <ons-list>
+          <ons-list-header>YOUR SNS LINK</ons-list-header>
+          <ons-list-item>
+            <textarea class="textarea" rows="4" placeholder="Textarea" id="editSNS" style="width: 100%"></textarea>
+          </ons-list-item>
+          <p style="text-align: center;">
+            <ons-button id="saveSNSEditBtn" pk="" onclick="saveSNSLink(`twitter`);">内容変更</ons-button>
+          </p>
+        </ons-list>
+        <p>
+          <ons-button onclick="hideDialog('linkRegister-dialog')">Close</ons-button>
+        </p>
+      </div>
+    </ons-dialog>
+  </template>
+
+  <ons-tabbar>
+    <ons-tab page="03_home.html">
+      <ons-icon icon="icon-home"></ons-icon>
+      <span style="font-size: 14px">みんなの投稿</span>
+    </ons-tab>
+    
+    <ons-tab page="05_mypage.html">
+      <ons-icon icon="icon-gear-a"></ons-icon>
+      <span style="font-size: 14px">マイページ</span>
+    </ons-tab>
+
+    <ons-tab page="04_post.html">
+      <ons-icon icon="icon-star"></ons-icon>
+      <span style="font-size: 14px">投稿する</span>
+    </ons-tab>
+
+    <ons-tab page="06_mypost.html">
+      <ons-icon icon="icon-gear-a"></ons-icon>
+      <span style="font-size: 14px">マイ投稿</span>
+    </ons-tab>
+
+  </ons-tabbar>
+</ons-page>

@@ -1,0 +1,225 @@
+/**/
+.icon_top {
+
+  border-radius: 20%;
+  /* top と left に 50% を指定して、要素の左上を中央にする. */
+
+
+  width: 100px;
+  height: 100px;
+}
+
+.icon_inside {
+  border-radius: 20%;
+  width: 45px;
+  height: 45px;
+  margin:0;
+  padding:0;
+}
+
+.parent{
+    position: relative;
+}
+
+.subImage {
+  margin-top: 3px;
+  width: 120px;
+  height: 148px;
+}
+
+.mainImage {
+  width: 320px;
+  height: 480px;
+}
+
+/*login page*/
+.loginPage {
+  background:rgba(0,0,0,0);
+}
+.loginPage_explain {
+  background:rgba(0,0,0,0);
+  color:white;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+.text-input--loginInput{
+  color:white;
+}
+.text-input--loginInput__label{
+  color:white;
+}
+
+.postNumHeader {
+  background-color: rgb(221, 235, 229);
+  color: red;
+}
+
+.iconLine {
+  line-height:100px;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+    width: 100%;
+    overflow-wrap: break-word;
+    background-color: rgb(195, 219, 213);
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+    overflow-wrap: break-word;
+    background-color: rgb(202, 190, 75);
+    color: black;
+}
+
+details[open] {
+    padding: .5em;
+    box-sizing:border-box;
+    width: 100%;
+    overflow-wrap: break-word;
+    background-color: rgb(213, 236, 247);
+    color: rgb(0, 0, 0);
+}
+
+.list-item--homeheader{
+  margin: 0;
+  padding: 0;
+}
+.list-item--homeheader__center {
+  padding: 4px 4px 4px 4px;
+  min-height: 26px;
+}
+
+.dialog--userPageDialog{
+  width:90%;
+}
+
+.card--userPage{
+  color: red;
+}
+
+.list-item--iconowner{
+  color: red;
+  background-color: rgb(219, 217, 195);
+  margin: 0;
+  padding: 0;
+}
+
+.list-item--iconowner__center {
+  padding: 4px 4px 4px 4px;
+  min-height: 26px;
+}
+
+.list-item--iconowner__right {
+  padding: 4px 4px 4px 4px;
+  min-height: 26px;
+}
+.list-item--iconowner__left {
+  padding: 4px 4px 4px 4px;
+  min-height: 26px;
+}
+
+.list-item--content{
+  background-color: rgb(219, 217, 195);
+  margin: 0;
+  padding: 0;
+}
+
+.list-item--content__center {
+  padding: 4px 4px 4px 4px;
+  min-height: 26px;
+  width: 100%;
+}
+
+.list-header--timestamp{
+  color: rgb(27, 27, 27);
+  background-color: rgb(199, 224, 240);
+}
+
+.nospace{
+  margin: 0;
+  padding: 0;
+}
+
+.kaigyou{
+  white-space: pre-wrap;
+  max-height:40vh;
+  overflow-y: scroll;
+}
+
+.posfix{
+  position: fixed;
+}
+
+.button--bluebtn{
+  background-color:rgb(89, 105, 250);
+}
+
+.page--loginpage__background{
+  background: #000f1d;
+  background-image: radial-gradient(#3a023b 13%, transparent 13%), radial-gradient(#003817 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+.caution {
+    position: relative;
+    margin: auto;
+    padding: 0.5em 1em;
+    width: 80%;
+    border: solid 3px rgb(255, 255, 0);
+    background:rgba(0,0,0,0.8);
+}
+.caution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: rgb(255, 255, 0);
+    color: rgb(255, 0, 0);;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.caution p {
+    margin: 0; 
+    padding: 0;
+    color: rgb(255, 255, 0);
+}
+
+h2 {
+  color:rgb(0, 103, 238);
+  text-align: center;
+  position: relative;
+  background: #ffffff;
+  padding: 0.25em 0.5em;
+  border-left: solid 2em #5c9ee7;
+}
+
+h2:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  position: absolute;
+  padding: 0em;
+  color: white;
+  font-weight: 900;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
