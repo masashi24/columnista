@@ -5,7 +5,10 @@ https://nifcloud-mbaas.github.io/MonacaUserDemoApp2/
 mb.jsの各種キーをご自身で設定ください
 
 // APIキー設定
+
 var applicationKey = '****';
+
 var clientKey = '****';
+
 const appId = '****';
 
