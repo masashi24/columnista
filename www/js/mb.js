@@ -1,7 +1,7 @@
 // APIキー設定
-var applicationKey = '3348ca87569d9bf15ada6d9b17bc828007966bd9219b6d21d03590cac2f785bd';
-var clientKey = '738d29f1e3bf103551af5860741dcd2146fcea19eecc41983bde711a747e0e58';
-const appId = '1G8kv6O6l0M8VKzJ';
+var applicationKey = '****';
+var clientKey = '****';
+const appId = '****';
 
 // SDKの初期化
 var ncmb = new NCMB(applicationKey, clientKey);
